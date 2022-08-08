@@ -7,7 +7,6 @@ export default function Today() {
     return (
         <Wrapper>
             <Header />
-            <div>Em construção</div>
             <Menu />
         </Wrapper>
     );
@@ -15,9 +14,4 @@ export default function Today() {
 
 const Wrapper = styled.div`
     background-color: #F2F2F2;
-    div {
-        width: 100vw;
-        height: 50vh;
-        display
-    }
 `;
