@@ -4,21 +4,21 @@ const Wrapper = styled.div`
     width: 80vw;
     margin: 0px auto;
 
-    div:nth-child(1) {
-        position: fixed;
-        top: 70px;
-        left: calc(50vw - 90px);
+    & > div:nth-child(1) {
+        width: 180px;
+        height: 162px;
+        margin: 70px auto 0px auto;
     }
 
     form {
         height: 145px;
-        margin: 274px 0px 25px 0px;
+        margin: 42px 0px 25px 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    div:nth-child(3) {
+    & > div:nth-child(3) {
         font-weight: 400;
         font-size: 14px;
         text-align: center;

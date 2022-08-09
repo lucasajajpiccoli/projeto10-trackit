@@ -14,6 +14,9 @@ const Button = styled.button`
 
     &:disabled {
         opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;
 

@@ -1,12 +1,27 @@
 import styled from 'styled-components';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-export default function Menu () {
+export default function Menu() {
     return (
         <Wrapper>
             <span>Hábitos</span>
-            <div><CircularProgressbar value={50} text={"Hoje"} /></div>
+            <div>
+                <CircularProgressbar
+                    value={50}
+                    text="Hoje"
+                    background
+                    backgroundPadding={6}
+                    strokeWidth={8}
+                    styles={buildStyles({
+                        backgroundColor: "#52B6FF",
+                        textColor: "#FFFFFF",
+                        textSize: "18px",
+                        pathColor: "#FFFFFF",
+                        trailColor: "transparent"
+                    })}
+                />
+            </div>
             <span>Histórico</span>
         </Wrapper>
     );
@@ -36,5 +51,6 @@ const Wrapper = styled.div`
         position: fixed;
         bottom: 10px;
         left: calc(50vw - 45px);
+        font-weight: 400;
     }
 `;

@@ -13,5 +13,6 @@ export default function Today() {
 }
 
 const Wrapper = styled.div`
+    height: 100vh;
     background-color: #F2F2F2;
 `;
