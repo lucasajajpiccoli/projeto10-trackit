@@ -9,10 +9,14 @@ const Input = styled.input`
 
     font-weight: 400;
     font-size: 20px;
-    color: #000000;
+    color: #666666;
 
     &::placeholder {
         color: #DBDBDB;
+    }
+
+    &:focus {
+        outline: none;
     }
 `;
 

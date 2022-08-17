@@ -4,7 +4,7 @@ import GlobalStyle from '../style/globalStyle';
 
 import Login from './Login';
 import Signup from './Signup';
-import Habits from './Habits';
+import Habits from './Habits/Habits';
 import Today from './Today';
 import History from './History';
 

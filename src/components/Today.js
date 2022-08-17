@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import dayjs from 'dayjs';
+import updateLocale from 'dayjs/plugin/updateLocale';
 
 import Header from './common/Header';
 import Title from './common/Title';
@@ -7,10 +9,17 @@ import Menu from './common/Menu';
 import HabitCard from './HabitCard';
 
 export default function Today() {
+    dayjs.extend(updateLocale);
+    dayjs.updateLocale('en', {
+        weekdays: [
+            "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"
+        ]
+    });
+
     return (
         <Wrapper>
             <Header />
-            <Title>Segunda, 17/05</Title>
+            <Title>{dayjs().format('dddd, DD/MM')}</Title>
             <div>Nenhum hábito concluído ainda</div>
             <div>
                 <HabitCard />
