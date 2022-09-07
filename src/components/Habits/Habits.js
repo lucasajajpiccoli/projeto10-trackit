@@ -4,6 +4,8 @@ import Header from '../common/Header';
 import Title from '../common/Title';
 import Menu from '../common/Menu';
 
+import Text from '../../style/Text';
+
 import NewHabit from './NewHabit';
 import Habit from './Habit';
 
@@ -18,6 +20,7 @@ export default function Habits() {
             </Title>
             <NewHabit weekdays={weekdays} />
             <Habit weekdays={weekdays} />
+            <Text>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</Text>
             <Menu />
         </Wrapper>
     );

@@ -17,7 +17,6 @@ export default function Habit ({weekdays}) {
 }
 
 const Wrapper = styled.div`
-    width: 90vw;
     padding: 15px 4vw;
     border-radius: 5px;
     background-color: #FFFFFF;
