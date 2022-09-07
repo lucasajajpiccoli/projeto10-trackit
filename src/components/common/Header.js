@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
 
+import UserContext from '../../contexts/UserContext';
+
 export default function Header () {
+    const { user } = useContext(UserContext);
+
     return (
         <Wrapper>
             <span>TrakcIt</span>
-            <img src="https://http.cat/411.jpg" alt="" />
+            <img src={user.image} alt="" />
         </Wrapper>
     );
 }

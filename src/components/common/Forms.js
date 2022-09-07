@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { ThreeDots } from 'react-loader-spinner';
 import { Link, useNavigate } from 'react-router-dom';
+
+import UserContext from '../../contexts/UserContext';
 
 import Logo from './Logo';
 
@@ -26,6 +29,8 @@ export default function Forms(
     }) {
     const navigate = useNavigate();
 
+    const { user, setUser } = useContext(UserContext);
+
     function sendForm(event) {
         event.preventDefault();
         const request = handleAPI(data);
@@ -35,7 +40,16 @@ export default function Forms(
             setDisable(false);
             setData({ ...initialData });
         });
-        request.then(() => navigate(pathTo));
+        request.then(response => {
+            if (formType === "login") {
+                setUser({
+                    ...user,
+                    image: response.data.image,
+                    token: response.data.token
+                });
+            }
+            navigate(pathTo);
+        });
     }
 
     return (
