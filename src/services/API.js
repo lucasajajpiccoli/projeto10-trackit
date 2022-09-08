@@ -36,7 +36,7 @@ function deleteHabit (habitId, token) {
     return promise;
 }
 
-function getTodayHabitis (token) {
+function getTodayHabits (token) {
     config.headers.Authorization = `Bearer ${token}`;
     const promise = axios.get(`${baseURL}/habits/today`, config);
     return promise;
@@ -66,7 +66,7 @@ export {
     postCreateHabit,
     getHabits,
     deleteHabit,
-    getTodayHabitis,
+    getTodayHabits,
     postHabitCheck,
     postHabitUncheck,
     getHabitsHistory

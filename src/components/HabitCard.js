@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 import Checkmark from '../style/Checkmark';
 
-export default function HabitCard () {
+export default function HabitCard ({ name, done, currentSequence, highestSequence }) {
     return (
         <Wrapper>
             <div>
-                <span>Ler 1 capítulo de livro</span>
-                <span>Sequência atual: 3 dias</span>
-                <span>Seu recorde: 5 dias</span>
+                <span>{name}</span>
+                <span>Sequência atual: {currentSequence} dias</span>
+                <span>Seu recorde: {highestSequence} dias</span>
             </div>
-            <Checkmark />
+            <Checkmark done = {done} />
         </Wrapper>
     );
 }
